@@ -11,12 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-
-
-
-
-
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -63,11 +58,25 @@ export default function Header(){
                             
 
                             <Box sx={{ justifyContent: 'flex-end',  flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                                    {pages.map((page) => (
+
+
+                                    {/* {pages.map((page) => (
                                         <Button  key={page}  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
                                             {page}
                                         </Button>
-                                    ))}
+                                    ))} */}
+                                        <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
+                                            <Link to="proyectos">Proyectos</Link>
+                                        </Button>
+
+                                        <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
+                                            <Link to="conoceme">Conoceme</Link>
+                                        </Button>
+
+                                        <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
+                                            <Link to="contactame">Contactame</Link>
+                                        </Button>
+
                             </Box>
 
 
@@ -79,13 +88,26 @@ export default function Header(){
                                         </IconButton>
 
                                         <Menu  id="menu-appbar"  anchorEl={anchorElNav}  anchorOrigin={{  vertical: 'bottom',  horizontal: 'left', }}  keepMounted  transformOrigin={{  vertical: 'top',  horizontal: 'left',  }}  open={Boolean(anchorElNav)}  onClose={handleCloseNavMenu}  sx={{  display: { xs: 'block', md: 'none' },  }} >
-                                            {pages.map((page) => (
+                                            {/* {pages.map((page) => (
                                                     <MenuItem key={page} onClick={handleCloseNavMenu}>
                                                         <Typography textAlign="center">
                                                             {page}
                                                         </Typography>
                                                     </MenuItem>
-                                            ))}
+                                            ))} */}
+
+                                                <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
+                                                    <Link to="proyectos">Proyectos</Link>
+                                                </Button>
+
+                                                <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
+                                                    <Link to="conoceme">Conoceme</Link>
+                                                </Button>
+
+                                                <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
+                                                    <Link to="contactame">Contactame</Link>
+                                                </Button>
+
                                         </Menu>
 
                             </Box>
