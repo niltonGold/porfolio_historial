@@ -1,1 +1,20 @@
 
+
+
+.container_links{
+    display: flex;
+    justify-content: space-between;
+}
+            .link_clip{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            }
+
+            .link_points{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+            }

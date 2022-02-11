@@ -10,26 +10,13 @@ export default function Proyectos(){
             <div className="cardContainer">
 
                 <div className="cardContainer1">
-
-                    
                         <CardTetris></CardTetris>
-                   
-
-                   
                         <CardTetris></CardTetris>
-                    
-
                 </div>
 
                 <div className="cardContainer2">
-
-                    
                         <CardTetris></CardTetris>
-               
-
                         <CardTetris></CardTetris>
-
-                    
                 </div>
 
             </div>
