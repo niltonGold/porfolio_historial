@@ -12,9 +12,17 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack';
+import './style.css';
 
 
 
+
+
+import SwichtButton from '../../switchChangeTheme';
+
+
+const preventDefault = (event) => event.preventDefault();
 
 export default function Header(){
 
@@ -40,44 +48,52 @@ export default function Header(){
         };
 
     return(
-
         <AppBar position="static">
             <Container maxWidth="xl">
-                
+            
                     <Toolbar disableGutters>
-
+                    <SwichtButton></SwichtButton>
                             {/* <Typography  variant="h6"  noWrap  component="div"  sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }} > */}
                             <Typography  variant="h6"  noWrap  component="div"  sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }} >
-                                    Nilton Medina
+                                
+                              Nilton Medina
+                                    
                             </Typography>
 
 
-                            <Typography  variant="h6"  noWrap  component="div"  sx={{ justifyContent: 'center', flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
-                                    Nilton Medina
+                            <Typography  variant="h6"  noWrap  component="div"  sx={{  justifyContent: 'center', flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
+                                <div> Nilton Medina </div>
                             </Typography>
                             
 
                             <Box sx={{ justifyContent: 'flex-end',  flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
+                                    <Stack spacing={1.5} direction="row">
 
-                                    {/* {pages.map((page) => (
-                                        <Button  key={page}  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
-                                            {page}
-                                        </Button>
-                                    ))} */}
-                                        <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
-                                            <Link to="proyectos">Proyectos</Link>
-                                        </Button>
+                                        <Link style={{ textDecoration: 'none' }} to="proyectos" >
+                                            <Button variant="contained"  onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                <div>Proyectos</div>
+                                            </Button>
+                                        </Link>    
 
-                                        <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
-                                            <Link to="conoceme">Conoceme</Link>
-                                        </Button>
+                                        <Link style={{ textDecoration: 'none' }} to="conoceme">
+                                            <Button variant="contained"   onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                <div>Conoceme</div>
+                                            </Button>
+                                        </Link>
 
-                                        <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
-                                            <Link to="contactame">Contactame</Link>
-                                        </Button>
+                                        <Link style={{ textDecoration: 'none' }} to="contactame">     
+                                            <Button variant="contained"   onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                <div>Contactame</div>
+                                            </Button>
+                                        </Link>
 
-                            </Box>
+                                    </Stack>
+
+                            </Box>   
+                                   
+                                        
+                            
 
 
                             {/*  Menu Hamburguesa  */}
@@ -88,25 +104,27 @@ export default function Header(){
                                         </IconButton>
 
                                         <Menu  id="menu-appbar"  anchorEl={anchorElNav}  anchorOrigin={{  vertical: 'bottom',  horizontal: 'left', }}  keepMounted  transformOrigin={{  vertical: 'top',  horizontal: 'left',  }}  open={Boolean(anchorElNav)}  onClose={handleCloseNavMenu}  sx={{  display: { xs: 'block', md: 'none' },  }} >
-                                            {/* {pages.map((page) => (
-                                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                                        <Typography textAlign="center">
-                                                            {page}
-                                                        </Typography>
-                                                    </MenuItem>
-                                            ))} */}
+                                            
+                                            <Stack className='pagina_mesas_btnGroup' spacing={-2} direction="column">
 
-                                                <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
-                                                    <Link to="proyectos">Proyectos</Link>
-                                                </Button>
+                                                <Link style={{ textDecoration: 'none' }} to="proyectos">
+                                                    <Button variant="contained"  onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                        <div>Proyectos</div>
+                                                    </Button>
+                                                </Link>
+                                                
+                                                <Link style={{ textDecoration: 'none' }} to="conoceme">
+                                                    <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                        <div>Conoceme</div>
+                                                    </Button>
+                                                </Link>
 
-                                                <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
-                                                    <Link to="conoceme">Conoceme</Link>
-                                                </Button>
-
-                                                <Button  onClick={handleCloseNavMenu}  sx={{ my: 2, color: 'white', display: 'block' }} >
-                                                    <Link to="contactame">Contactame</Link>
-                                                </Button>
+                                                <Link style={{ textDecoration: 'none' }} to="contactame">
+                                                    <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                        <div>Contactame</div>
+                                                    </Button>
+                                                </Link>
+                                            </Stack>    
 
                                         </Menu>
 
@@ -115,6 +133,5 @@ export default function Header(){
                     </Toolbar>
             </Container>
         </AppBar>
-
     )
 }

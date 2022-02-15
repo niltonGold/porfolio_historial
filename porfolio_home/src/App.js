@@ -6,7 +6,6 @@ import Conocome from './pages/conoceme';
 import Contactame from './pages/contactame';
 import Proyectos from './pages/proyectos';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
-import { Fragment } from 'react';
 
 
 
@@ -14,13 +13,12 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 
-
+import ThemeProvider from  '../src/theming/theme-provider';
+import SwichtButton from '../src/switchChangeTheme';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -53,13 +51,15 @@ ElevationScroll.propTypes = {
 
 function App(props) {
   return (
-    
+  <ThemeProvider >   
       <BrowserRouter>
 
               <CssBaseline />
-            
+
               <ElevationScroll {...props}>  
+
                   <AppBar>
+                        
                         <Header></Header>
                   </AppBar>
               </ElevationScroll>
@@ -87,7 +87,7 @@ function App(props) {
               </Container>
 
       </BrowserRouter> 
-
+    </ThemeProvider > 
   );
 }
 

@@ -1,0 +1,26 @@
+
+.mainBoxConoceme{
+    /* background-color: rgb(238, 195, 195); */
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+    .box1Conoceme{
+        width: 50%;
+        margin-top: 2rem;
+        background-color:white;     
+    }
+        .paragraph1Conoceme{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+
+
+       

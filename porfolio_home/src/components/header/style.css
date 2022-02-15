@@ -1,0 +1,8 @@
+
+.pagina_mesas_btnGroup{
+    width: 120px;
+    display: grid;
+    place-items: center;
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+} 
