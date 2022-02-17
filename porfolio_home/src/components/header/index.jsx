@@ -19,12 +19,43 @@ import './style.css';
 
 
 
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+
+
+
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+
+
 import SwichtButton from '../../switchChangeTheme';
 
 
 const preventDefault = (event) => event.preventDefault();
 
 export default function Header(){
+
+
+
+
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
+
+
+
+
+
+
+    // const [value, setValue] = React.useState(0);
+
+
+
+
+
+
 
     const pages = ['Proyectos', 'Conoceme', 'Contactame'];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -41,11 +72,18 @@ export default function Header(){
       
         const handleCloseNavMenu = () => {
           setAnchorElNav(null);
+        //   alert('hola');
+
+          
+
         };
       
         const handleCloseUserMenu = () => {
           setAnchorElUser(null);
         };
+
+
+
 
     return(
         <AppBar position="static">
@@ -67,26 +105,42 @@ export default function Header(){
                             
 
                             <Box sx={{ justifyContent: 'flex-end',  flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                            
 
                                     <Stack spacing={1.5} direction="row">
 
+
+                                    
+
+                                        
                                         <Link style={{ textDecoration: 'none' }} to="proyectos" >
-                                            <Button variant="contained"  onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                            <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                               
                                                 <div>Proyectos</div>
+                                                
                                             </Button>
                                         </Link>    
+                                        
 
+
+                                       
                                         <Link style={{ textDecoration: 'none' }} to="conoceme">
                                             <Button variant="contained"   onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
                                                 <div>Conoceme</div>
                                             </Button>
                                         </Link>
+                                       
+
+                                        
 
                                         <Link style={{ textDecoration: 'none' }} to="contactame">     
                                             <Button variant="contained"   onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
                                                 <div>Contactame</div>
                                             </Button>
                                         </Link>
+                                        
+
+                                    
 
                                     </Stack>
 
