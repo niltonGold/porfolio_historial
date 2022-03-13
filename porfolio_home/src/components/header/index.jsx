@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
+import { useState } from 'react';
 import './style.css';
 
 
@@ -60,28 +61,103 @@ export default function Header(){
     const pages = ['Proyectos', 'Conoceme', 'Contactame'];
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+
+    const [ toggleState, upDateToggleState ] = useState ('proyectos');
+
+    const [ toggleStateL, upDateToggleStateL ] = useState ('');
+
+    const [ proyectos, setProyectos ] = useState(true);
+
+    const [ conoceme, setConoceme ] = useState(false);
+
+    const [ contactame, setContactame ] = useState(false);
+
         const [anchorElNav, setAnchorElNav] = React.useState(null);
         const [anchorElUser, setAnchorElUser] = React.useState(null);
       
         const handleOpenNavMenu = (event) => {
-          setAnchorElNav(event.currentTarget);
+           setAnchorElNav(event.currentTarget);
         };
         const handleOpenUserMenu = (event) => {
           setAnchorElUser(event.currentTarget);
         };
       
-        const handleCloseNavMenu = () => {
-          setAnchorElNav(null);
-        //   alert('hola');
+        const handleCloseNavMenu = (btn) => {
+        //   setAnchorElNav(null); 
+        //   console.log(btn.target.id);
 
+        //   if ( btn.target.id === '' ) { 
+        //     console.log('vacio');
+        //   }else { 
+          setAnchorElNav(null); 
+        //   upDateToggleState(btn.target.id);  
           
+          
+
+            //         if ( toggleState === 'proyectos' ){
+            //             setProyectos(true);
+            //             setConoceme(false);
+            //             setContactame(false);
+            //         }
+
+
+            //         if ( toggleState === 'conoceme' ){
+            //             setProyectos(false);
+            //             setConoceme(true);
+            //             setContactame(false);
+            //         }
+
+
+            //         if ( toggleState === 'contactame' ){
+            //             setProyectos(false);
+            //             setConoceme(false);
+            //             setContactame(true);
+            //         }
+
+            // }
 
         };
       
+
+
         const handleCloseUserMenu = () => {
           setAnchorElUser(null);
         };
 
+
+
+        function toggleTab(tabSeleccionado){
+            upDateToggleState(tabSeleccionado);
+            console.log(toggleState);
+        }
+
+
+
+
+
+        const handelLink = (e) => {
+            console.log('hola link');
+            console.log(e.target.id);
+
+            let destinoLink = e.target.id;
+
+            if ( destinoLink === 'proyectos' ){
+                upDateToggleStateL(destinoLink);
+                upDateToggleState(destinoLink);
+            }
+
+            if ( destinoLink === 'conoceme' ){
+                upDateToggleStateL(destinoLink);
+                upDateToggleState(destinoLink);
+            }
+
+            if ( destinoLink === 'contactame' ){
+                upDateToggleStateL(destinoLink);
+                upDateToggleState(destinoLink);
+            }
+        
+
+        }
 
 
 
@@ -90,17 +166,18 @@ export default function Header(){
             <Container maxWidth="xl">
             
                     <Toolbar disableGutters>
-                    <SwichtButton></SwichtButton>
+
+                            <SwichtButton></SwichtButton>
                             {/* <Typography  variant="h6"  noWrap  component="div"  sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }} > */}
                             <Typography  variant="h6"  noWrap  component="div"  sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }} >
                                 
-                              Nilton Medina
+                                Nilton Medina Porfolio
                                     
                             </Typography>
 
 
                             <Typography  variant="h6"  noWrap  component="div"  sx={{  justifyContent: 'center', flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
-                                <div> Nilton Medina </div>
+                                <div> Nilton Medina Porfolio</div>
                             </Typography>
                             
 
@@ -109,14 +186,11 @@ export default function Header(){
 
                                     <Stack spacing={1.5} direction="row">
 
-
-                                    
-
-                                        
-                                        <Link style={{ textDecoration: 'none' }} to="proyectos" >
+                                        <Link style={{ textDecoration: 'none' }} to='proyectos'>
                                             <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
                                                
-                                                <div>Proyectos</div>
+                                                {/* <div className={ toggleState === 'proyectos' ? 'tab-activate' : 'tab-desactivate' } onClick={ () => toggleTab('proyectos') }>Proyectos</div> */}
+                                                <div id='proyectos'>Proyectos</div>
                                                 
                                             </Button>
                                         </Link>    
@@ -124,23 +198,23 @@ export default function Header(){
 
 
                                        
-                                        <Link style={{ textDecoration: 'none' }} to="conoceme">
+                                        <Link style={{ textDecoration: 'none' }} to='conoceme'>
                                             <Button variant="contained"   onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
-                                                <div>Conoceme</div>
+                                                {/* <div className={ toggleState === 'conoceme' ? 'tab-activate' : 'tab-desactivate' } onClick={ () => toggleTab('conoceme')} >Conoceme</div> */}
+                                                <div id='conoceme'>Conoceme</div>
+                                                
                                             </Button>
                                         </Link>
                                        
 
                                         
 
-                                        <Link style={{ textDecoration: 'none' }} to="contactame">     
-                                            <Button variant="contained"   onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
-                                                <div>Contactame</div>
+                                        <Link style={{ textDecoration: 'none' }} to='contactame'>     
+                                            <Button variant="contained"  onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                {/* <div className={ toggleState === 'contactame' ? 'tab-activate' : 'tab-desactivate' } onClick={ () => toggleTab('contactame')}  >Contactame</div> */}
+                                                <div id='contactame'>Contactame</div>
                                             </Button>
-                                        </Link>
-                                        
-
-                                    
+                                        </Link>  
 
                                     </Stack>
 
@@ -178,6 +252,7 @@ export default function Header(){
                                                         <div>Contactame</div>
                                                     </Button>
                                                 </Link>
+
                                             </Stack>    
 
                                         </Menu>

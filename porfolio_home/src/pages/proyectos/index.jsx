@@ -7,9 +7,11 @@ export default function Proyectos(){
 
     return(
  
-           <Stack sx={{ bgcolor : 'secondary.main' }}>
-            <div className="cardContainer">
+           <Stack sx={{ pt:'1rem', justifyContent: 'center', alignItems: 'center', bgcolor : 'secondary.main' }}>
+            {/* <div className="cardContainer"> */}
                   
+                <div className='proyectos_title' > PROYECTOS</div> 
+
                 <div className="cardContainer1">
                         
                         <CardTetris></CardTetris>
@@ -22,7 +24,7 @@ export default function Proyectos(){
                         <CardTetris></CardTetris>
                 </div>
 
-            </div>
+            {/* </div> */}
             </Stack>
     )
 }

@@ -18,9 +18,9 @@ import Stack from '@mui/material/Stack';
 export default function Contactame(){
 
     return(
-        <Stack sx={{bgcolor:'secondary.main'}}>
-        <div className='mainBoxContactame'>
-
+        <Stack sx={{ justifyContent: 'center', alignItems: 'center', height: '100vh', bgcolor:'secondary.main'}}>
+        {/* <div className='mainBoxContactame'> */}
+            <div className='contactame-title' >CONTACTAME</div>
             <div className='box1Contactame'>
 
                 <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
@@ -86,7 +86,7 @@ export default function Contactame(){
 
             </div>
 
-        </div>
+        {/* </div> */}
         </Stack>
     );
 }

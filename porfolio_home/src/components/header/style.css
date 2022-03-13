@@ -6,3 +6,37 @@
     margin-top: -0.5rem;
     margin-bottom: -0.5rem;
 } 
+
+
+    .btn{
+        background-color: antiquewhite;
+    }
+
+            .tab-activate{
+                background-color: black;
+                
+                /* color: white; */
+                /* display: flex; */
+                /* justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px; */
+            }
+                    .tab-activate:hover{
+                        cursor: pointer;
+                    }
+
+
+            .tab-desactivate{
+                /* background-color: antiquewhite; */
+                /* display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px; */
+            }
+                    .tab-desactivate:hover{
+                        cursor: pointer;
+                    }
