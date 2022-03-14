@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+
 import CardTetris from "../../components/proyectos_components/tetris_proyect_components/card_tetris";
 import './style.css';
 import Stack from '@mui/material/Stack';
