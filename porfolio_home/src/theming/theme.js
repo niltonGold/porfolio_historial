@@ -33,8 +33,8 @@ export const myDarkTheme = createTheme ({
     palette:{
         primary:{
             main:blue[500],
-            // dark:'#0069c0'
-            dark:'#000000'
+            dark:'#0069c0'
+            // dark:'#000000'
         },
         secondary:{
             main:indigo[700],
