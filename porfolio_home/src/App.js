@@ -1,14 +1,9 @@
-
-
 import './App.css';
 import Header from './components/header';
 import Conocome from './pages/conoceme';
 import Contactame from './pages/contactame';
 import Proyectos from './pages/proyectos';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
-
-
-
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
@@ -16,9 +11,11 @@ import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Container from '@mui/material/Container';
-
 import ThemeProvider from  '../src/theming/theme-provider';
-import SwichtButton from '../src/switchChangeTheme';
+import { Stack } from '@mui/material';
+
+
+
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -38,6 +35,7 @@ function ElevationScroll(props) {
 
 
 
+
 ElevationScroll.propTypes = {
   children: PropTypes.element.isRequired,
   /**
@@ -49,55 +47,58 @@ ElevationScroll.propTypes = {
 
 
 
+
 function App(props) {
   return (
+  
   <ThemeProvider >   
-      <BrowserRouter>
+  <Stack sx={{ bgcolor: 'primary.main' }}>
+          <BrowserRouter>
 
-              <CssBaseline />
+                <CssBaseline />
 
-              <ElevationScroll {...props}>  
+                <ElevationScroll {...props}>  
 
-                  <AppBar>
-                        
-                        <Header></Header>
+                    <AppBar>
+                          
+                          <Header></Header>
 
-                  </AppBar>
-              </ElevationScroll>
+                    </AppBar>
 
-              <Toolbar />
+                </ElevationScroll>
 
-              <Container sx={{ bgcolor:'secondary.main ', width:'80%', height:'100vh' }}>
-                  <Switch>
+                <Toolbar />
 
+                <Container sx={{ bgcolor:'secondary.main', height:'100vh' }}>
                 
-                   
+                      <Switch>
 
-                    
-                        <Route path="/proyectos">
-                          <Proyectos></Proyectos>
-                        </Route>
-
+                            <Route path="/proyectos">
+                              <Proyectos></Proyectos>
+                            </Route>
 
 
-                        <Route path="/conoceme">
-                          <Conocome></Conocome>
-                        </Route>
 
-                        <Route path="/contactame">
-                          <Contactame></Contactame>
-                        </Route>
+                            <Route path="/conoceme">
+                              <Conocome></Conocome>
+                            </Route>
 
-                         <Route  exact  path="/">
-                          <Proyectos></Proyectos>  
-                        </Route> 
+                            <Route path="/contactame">
+                              <Contactame></Contactame>
+                            </Route>
 
+                            <Route  exact  path="/">
+                              <Proyectos></Proyectos>  
+                            </Route> 
 
-                  </Switch> 
-              </Container>
+                      </Switch> 
 
-      </BrowserRouter> 
-    </ThemeProvider > 
+                </Container>
+
+          </BrowserRouter> 
+  </Stack>
+  </ThemeProvider > 
+ 
   );
 }
 
