@@ -16,8 +16,11 @@ import { bgcolor } from '@mui/system';
 export default function Conocome(){
 
     return(
-        <Stack sx={{bgcolor:'secondary.main'}}>
-        <div className='mainBoxConoceme'>
+
+        <Stack sx={{ justifyContent: 'center', alignItems: 'center', bgcolor:'secondary.main'}}>
+        {/* <div className='mainBoxConoceme'> */}
+
+            <div className='conoceme-title'>CONOCEME</div>
             <div className='box1Conoceme'>
                 <Typography component="div">
 
@@ -95,8 +98,9 @@ export default function Conocome(){
 
 
                 </Typography>
-            </div>
+            {/* </div> */}
         </div>
         </Stack>
+        
     )
 }

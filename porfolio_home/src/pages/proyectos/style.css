@@ -6,6 +6,11 @@
     width: 100%;
     height: 100%;
 }
+
+    .proyectos_title{
+        font-size: xx-large;
+        text-align: center;
+    }
             .cardContainer1{
                 display: flex;
                 flex-wrap: wrap;

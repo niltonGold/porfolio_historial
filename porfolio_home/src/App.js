@@ -61,16 +61,24 @@ function App(props) {
                   <AppBar>
                         
                         <Header></Header>
+
                   </AppBar>
               </ElevationScroll>
 
               <Toolbar />
 
-              <Container>
+              <Container sx={{ bgcolor:'secondary.main ', width:'80%', height:'100vh' }}>
                   <Switch>
+
+                
+                   
+
+                    
                         <Route path="/proyectos">
                           <Proyectos></Proyectos>
                         </Route>
+
+
 
                         <Route path="/conoceme">
                           <Conocome></Conocome>
@@ -80,9 +88,11 @@ function App(props) {
                           <Contactame></Contactame>
                         </Route>
 
-                        <Route path="/">
+                         <Route  exact  path="/">
                           <Proyectos></Proyectos>  
                         </Route> 
+
+
                   </Switch> 
               </Container>
 
