@@ -17,7 +17,7 @@ export default function Conocome(){
 
     return(
 
-        <Stack sx={{ justifyContent: 'center', alignItems: 'center', bgcolor:'secondary.main'}}>
+        <Stack sx={{ alignItems: 'center', bgcolor:'secondary.main', height:'100vh'}}>
 
             <div className='conoceme-title'>CONOCEME</div>
 
