@@ -9,7 +9,7 @@ export default function Proyectos(){
 
     return(
  
-           <Stack sx={{ justifyContent: 'center', alignItems: 'center', bgcolor : 'secondary.main', width:'100%' }}>
+           <Stack sx={{ bgcolor : 'secondary.main', width:'100%', height:'100vw' }}>
   
                   
                         <div className='proyectos_title' > PROYECTOS</div> 

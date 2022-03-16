@@ -1,6 +1,13 @@
+
 @font-face {
   font-family: 'Oswald', sans-serif;
   src: url('./fonts/Oswald-Bold.ttf') format('ttf');
+}
+
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,6 +15,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.body{
+  /* background-color: aqua; */
+  height: 100%;
+}
+
+/* #root{
+  background-color: aquamarine;
+  height: 100%;
+} */
 
 code {
   font-family: oswald, sans-serif ;
@@ -16,3 +32,4 @@ code {
 div{
   font-family: oswald, sans-serif ;
 }
+

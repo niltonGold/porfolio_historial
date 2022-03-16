@@ -50,9 +50,10 @@ ElevationScroll.propTypes = {
 
 function App(props) {
   return (
-  
   <ThemeProvider >   
-  <Stack sx={{ bgcolor: 'primary.main' }}>
+  
+  {/* <Stack sx={{ bgcolor: 'primary.main' }}> */}
+  <Stack sx={{ bgcolor: 'primary.main', height:'100%'  }}>
           <BrowserRouter>
 
                 <CssBaseline />
@@ -69,8 +70,8 @@ function App(props) {
 
                 <Toolbar />
 
-                <Container sx={{ bgcolor:'secondary.main', height:'100vh' }}>
-                
+                {/* <Container sx={{ bgcolor:'secondary.main', height:'100vw' }}> */}
+                <Container sx={{  height:'100vw' }}>
                       <Switch>
 
                             <Route path="/proyectos">
@@ -97,7 +98,15 @@ function App(props) {
 
           </BrowserRouter> 
   </Stack>
+
+
+
+  
+
+
+
   </ThemeProvider > 
+
  
   );
 }
