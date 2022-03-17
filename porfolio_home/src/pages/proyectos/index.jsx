@@ -2,6 +2,7 @@ import CardTetris from "../../components/proyectos_components/tetris_proyect_com
 import './style.css';
 import Stack from '@mui/material/Stack';
 import MoodIcon from '@mui/icons-material/Mood';
+import CardWebResponsiveAnimada from "../../components/proyectos_components/webresponsive_proyect_components/card_webresponsive";
 
 
 
@@ -37,7 +38,7 @@ export default function Proyectos(){
                         {/* <div className="proyects_container"> */}
                         
                         <Stack sx={{ justifyContent:'center', borderRadius:'25px', pt:'1rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
-                                <CardTetris/>
+                                <CardWebResponsiveAnimada/>
                         </Stack> 
 
 
