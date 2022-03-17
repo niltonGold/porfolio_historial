@@ -22,6 +22,8 @@ import SwipeableTextMobileStepper from '../carousel_effect_tetris';
 
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import { Stack } from '@mui/material';
+import { bgcolor, fontSize } from '@mui/system';
 
 
 
@@ -61,31 +63,33 @@ export default function CardTetris() {
   return (
       <React.Fragment>
 
-            <Card sx={{ maxWidth: 300 }}>
-                  
+            <Stack sx={{ alignItems:'center', width:'100%'}}> 
+            <Card sx={{width:'80%', justifySelf:'center', justifyContent:'center' }}>
+                  <div className='card-container-carrusel-description-link'>
+                  <Stack sx={{ width:'100%' }} >      
                   <SwipeableTextMobileStepper></SwipeableTextMobileStepper>
-                  
-
+                  </Stack>
+                  <div className='card-container-description-link'>
                   <CardContent>  
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography sx={{  fontSize:{ xs:'medium', md:'x-large' }  }} gutterBottom variant="h5" component="div">
                               Tetris
                         </Typography>
 
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography sx={{fontSize:{ xs:'small', md:'large' }  }} variant="body2" color="text.secondary">
                         Lizards are a widespread group of squamate reptiles, with over 6,000
                         species, ranging across all continents except Antarctica
                         </Typography>
                   </CardContent>
 
 
-                  <CardActions className='container_links'>
+                  {/* <CardActions className='container_links'> */}
 
                         <div className='link_clip'> 
                               <InsertLinkIcon></InsertLinkIcon> 
-                              <Button size="small">Enlace</Button>
+                              <Button><Typography  sx={{ textTransform: 'capitalize', fontSize:{ xs:'small', md:'large' }  }}>Enlace Al Proyecto</Typography></Button>
                         </div>
                         
-                        <div className='link_points'>
+                        {/* <div className='link_points'>
 
                                     <MoreHorizIcon></MoreHorizIcon>
 
@@ -115,10 +119,12 @@ export default function CardTetris() {
                                           </Modal>
                                     </div>
 
-                        </div>
-                  </CardActions>
-
-            </Card>
+                        </div> */}
+                  {/* </CardActions>  */}
+                  </div>
+                  </div>
+                  </Card>
+            </Stack>
 
       </React.Fragment>
   );

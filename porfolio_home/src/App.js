@@ -53,7 +53,7 @@ function App(props) {
   <ThemeProvider >   
   
   {/* <Stack sx={{ bgcolor: 'primary.main' }}> */}
-  <Stack sx={{ bgcolor: 'primary.main', height:'100%'  }}>
+  <Stack sx={{ height:'100%'  }}>
           <BrowserRouter>
 
                 <CssBaseline />

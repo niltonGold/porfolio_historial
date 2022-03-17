@@ -1,4 +1,28 @@
 
+@media ( min-width : 0px ) and ( max-width: 480px ) { 
+    .card-container-carrusel-description-link{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+}
+
+
+.card-container-carrusel-description-link{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+    .card-container-description-link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* background-color: rgb(149, 104, 46); */
+        
+    }
 
 
 .container_links{
