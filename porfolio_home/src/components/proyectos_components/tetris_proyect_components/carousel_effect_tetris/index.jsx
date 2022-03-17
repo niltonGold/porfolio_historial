@@ -14,6 +14,8 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import tetris from '../../../../images/tetris.jpg';
 import tetris2 from '../../../../images/tetris2.jpg';
 import tetris3 from '../../../../images/tetris3.jpg';
+import { Stack } from '@mui/material';
+import './style.css';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -60,17 +62,23 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ alignSelf:'center', maxWidth: 600, flexGrow: 1 }}>
+      
+      
+      {/* <Paper  square  elevation={0}  sx={{ display: 'flex',  alignItems: 'center',  height: 30,  pl: 2,  bgcolor: 'background.default',  }}  > */}
 
-      <Paper  square  elevation={0}  sx={{  display: 'flex',  alignItems: 'center',  height: 30,  pl: 2,  bgcolor: 'background.default',  }}  >
+
+      {/* <Paper  square  elevation={0}  sx={{  alignItems: 'center',  height: 30,  pl: 2,  bgcolor: 'background.default',  }}> */}
+      <Paper  square  elevation={0}  sx={{  alignItems: 'center',  height: 30,  pl: 2 }}>
         <Typography>  {images[activeStep].label}  </Typography>
       </Paper>
+     
 
-      <AutoPlaySwipeableViews  axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}  index={activeStep}  onChangeIndex={handleStepChange}  enableMouseEvents  >
+      <AutoPlaySwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}  index={activeStep}  onChangeIndex={handleStepChange}  enableMouseEvents  >
             {images.map((step, index) => (
                 <div key={step.label}>
                       {Math.abs(activeStep - index) <= 2 ? (
-                        <Box  component="img"  sx={{  height: 200,  display: 'block',  maxWidth: 400,  overflow: 'hidden',  width: '100%',  }} src={step.imgPath}  alt={step.label} />
+                        <Box  component="img"  sx={{ height: '50%',  display: 'block',  maxWidth: 600,  overflow: 'hidden',  width: '100%',  }} src={step.imgPath}  alt={step.label} />
                       ) : null}
                 </div>
             ))}
@@ -79,7 +87,7 @@ function SwipeableTextMobileStepper() {
 
       <MobileStepper  steps={maxSteps}  position="static"  activeStep={activeStep} 
               nextButton={
-                  <Button  size="small"  onClick={handleNext}  disabled={activeStep === maxSteps - 1}  >
+                  <Button sx={{  fontSize:{ xs:'x-small', md:'large' }  }}  size="small"  onClick={handleNext}  disabled={activeStep === maxSteps - 1}  >
                       Next
                       {theme.direction === 'rtl' ? (
                         <KeyboardArrowLeft />
@@ -90,7 +98,7 @@ function SwipeableTextMobileStepper() {
               }
 
               backButton={
-                  <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                  <Button sx={{  fontSize:{ xs:'x-small', md:'large' }  }} size="small" onClick={handleBack} disabled={activeStep === 0}>
                       {theme.direction === 'rtl' ? (
                         <KeyboardArrowRight />
                       ) : (
