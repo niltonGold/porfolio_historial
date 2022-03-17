@@ -5,14 +5,16 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 import './style.css';
-import SwipeableTextMobileStepper from '../carousel_effect_tetris';
+import SwipeableTextMobileStepper from '../carousel_effect_webresponsive';
 import { Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { color } from '@mui/system';
 
 
 
+export default function CardWebResponsiveAnimada() {
 
-export default function CardTetris() {
-
+    const linkto = 'https://webresponsiveanimada.herokuapp.com/';
 
   return (
       <React.Fragment>
@@ -32,13 +34,13 @@ export default function CardTetris() {
                                                       <CardContent>  
 
                                                             <Typography sx={{  fontSize:{ xs:'medium', md:'x-large' }  }} gutterBottom variant="h5" component="div">
-                                                                  Tetris
+                                                                  WebResponsiveAnimada
                                                             </Typography>
 
                                                             <Typography sx={{fontSize:{ xs:'small', md:'large' }  }} variant="body2" color="text.secondary">
 
-                                                                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                                  species, ranging across all continents except Antarctica
+                                                                  <div>Lizards are a widespread group of squamate reptiles, with over 6,000</div>
+                                                                  <div>species, ranging across all continents except Antarctica</div>
 
                                                             </Typography>
 
@@ -49,11 +51,15 @@ export default function CardTetris() {
 
                                                             <InsertLinkIcon></InsertLinkIcon> 
 
+                                                            <a className='enlace_al_proyecto' href={linkto}>
                                                             <Button>
                                                                   <Typography  sx={{ textTransform: 'capitalize', fontSize:{ xs:'small', md:'large' }  }}>
-                                                                        Enlace Al Proyecto
+                                                                        
+                                                                                Enlace Al Proyecto
+                                                                          
                                                                   </Typography>
                                                             </Button>
+                                                            </a>
 
                                                       </div>
                                                 

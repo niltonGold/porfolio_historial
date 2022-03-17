@@ -10,9 +10,9 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-import tetris from '../../../../images/tetris.jpg';
-import tetris2 from '../../../../images/tetris2.jpg';
-import tetris3 from '../../../../images/tetris3.jpg';
+import webResponsive_imagen1 from '../images_webresponsive/cards_giratorios.jpg';
+import webResponsive_imagen2 from '../images_webresponsive/tablero_giratorio.jpg';
+import webResponsive_imagen3 from '../images_webresponsive/formulario_responsive.jpg';
 
 import './style.css';
 
@@ -26,21 +26,21 @@ import './style.css';
     const images = [
 
       {
-        label: 'principal',
+        label: 'Cards giratorios ',
         imgPath:
-          tetris,
+        webResponsive_imagen1,
       },
 
       {
-        label: 'Score',
+        label: 'Tablero giratorio',
         imgPath:
-          tetris2,
+        webResponsive_imagen2,
       },
       
       {
-        label: 'Final',
+        label: 'Formulario con responsive',
         imgPath:
-          tetris3,
+        webResponsive_imagen3,
       },
 
     ];
@@ -77,12 +77,12 @@ function SwipeableTextMobileStepper() {
 
   return (
     
-    <Box sx={{ alignSelf:'center', maxWidth: 600, flexGrow: 1 }}>
+    <Box sx={{ alignSelf:'center', maxWidth: 600, flexGrow: 1, pl:'0.5rem', pr:'0.5rem' }}>
       
 
-          {/* <Paper  square  elevation={0}  sx={{  alignItems: 'center',  height: 30,  pl: 2 }}> */}
-          <Paper  square  elevation={0}  sx={{ alignItems: 'center',  height: 30,  pl: 1 }}>
-            <Typography>
+          <Paper  square  elevation={0}  sx={{ alignItems: 'center',  height: 40 }}>
+
+            <Typography sx={{ fontSize:{xs:'x-small', md:'medium' }, pt:'0.7rem',textAlign:'center', justifyContent:'center', alignSelf:'center',  fontSize:{ xs:'x-small', md:'large' }  }} >
                 {images[activeStep].label}  
             </Typography>
 
@@ -94,7 +94,7 @@ function SwipeableTextMobileStepper() {
                 {images.map((step, index) => (
                     <div key={step.label}>
                           {Math.abs(activeStep - index) <= 2 ? (
-                            <Box  component="img"  sx={{ height: '50%',  display: 'block',  maxWidth: 600,  overflow: 'hidden',  width: '100%',  }} src={step.imgPath}  alt={step.label} />
+                            <Box  component="img"  sx={{ height: '50%',  display: 'block', maxWidth: 600,  overflow: 'hidden',  width: '100%'  }} src={step.imgPath}  alt={step.label} />
                           ) : null}
                     </div>
                 ))}
