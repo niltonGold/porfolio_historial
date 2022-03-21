@@ -1,0 +1,47 @@
+.enlace_al_proyecto{
+    text-decoration: none;
+}
+
+@media ( min-width : 0px ) and ( max-width: 600px ) { 
+    .card-container-carrusel-description-link{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+
+    .titulo-descripcion{
+        display: none;
+    }
+}
+
+@media ( min-width : 601px ) { 
+    .card-container-carrusel-description-link{
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        
+    }
+
+    .titulo-descripcion{
+        display: visibility;
+        font-size: large;
+    }
+}
+
+
+
+.link_clip{
+display: flex;
+flex-direction: row;
+align-items: center;
+/* background-color: aqua; */
+justify-content: center;
+
+}
+
+.link_points{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}

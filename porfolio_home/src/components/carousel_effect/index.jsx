@@ -10,83 +10,87 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-import webResponsive_imagen1 from '../images_webresponsive/cards_giratorios.jpg';
-import webResponsive_imagen2 from '../images_webresponsive/tablero_giratorio.jpg';
-import webResponsive_imagen3 from '../images_webresponsive/formulario_responsive.jpg';
+
+
 
 import './style.css';
 
 
 
 
-    const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
+
+
+
+
+function SwipeableTextMobileStepper(props) {
+
+
+    const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 
     const images = [
 
-      {
-        label: 'Cards giratorios ',
+        {
+        label: `${props.label_1}`,
         imgPath:
-        webResponsive_imagen1,
-      },
+        props.imagen_1,
+        },
 
-      {
-        label: 'Tablero giratorio',
+        {
+        label: `${props.label_2}`,
         imgPath:
-        webResponsive_imagen2,
-      },
-      
-      {
-        label: 'Formulario con responsive',
+        props.imagen_2,
+        },
+        
+        {
+        label: `${props.label_3}`,
         imgPath:
-        webResponsive_imagen3,
-      },
+        props.imagen_3,
+        },
 
     ];
 
 
+    const theme = useTheme();
 
 
-function SwipeableTextMobileStepper() {
+    const [activeStep, setActiveStep] = React.useState(0);
 
 
-  const theme = useTheme();
+    const maxSteps = images.length;
 
 
-  const [activeStep, setActiveStep] = React.useState(0);
+    const handleNext = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    };
 
 
-  const maxSteps = images.length;
+    const handleBack = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    };
 
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
+    const handleStepChange = (step) => {
+        setActiveStep(step);
+    };
 
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
 
 
   return (
     
-    <Box sx={{ alignSelf:'center', maxWidth: 600, flexGrow: 1, pl:'0.5rem', pr:'0.5rem' }}>
+    // <Box sx={{ alignSelf:'center', maxWidth: 600, flexGrow: 1, p:'1rem' }}>
+    <Box sx={{ alignSelf:'center', maxWidth: { xs:300, sm:400 } , flexGrow: 1, p:'1rem' }}>
       
 
-          <Paper  square  elevation={0}  sx={{ alignItems: 'center',  height: 40 }}>
+          {/* <Paper  square  elevation={0}  sx={{ alignItems: 'center',  height: 40 }}>
 
             <Typography sx={{ fontSize:{xs:'x-small', md:'medium' }, pt:'0.7rem',textAlign:'center', justifyContent:'center', alignSelf:'center',  fontSize:{ xs:'x-small', md:'large' }  }} >
                 {images[activeStep].label}  
             </Typography>
 
-          </Paper>
+          </Paper> */}
         
 
           <AutoPlaySwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}  index={activeStep}  onChangeIndex={handleStepChange}  enableMouseEvents  >
@@ -94,12 +98,23 @@ function SwipeableTextMobileStepper() {
                 {images.map((step, index) => (
                     <div key={step.label}>
                           {Math.abs(activeStep - index) <= 2 ? (
-                            <Box  component="img"  sx={{ height: '50%',  display: 'block', maxWidth: 600,  overflow: 'hidden',  width: '100%'  }} src={step.imgPath}  alt={step.label} />
+                            <Box  component="img"  sx={{ height: '50%',  display: 'block', maxWidth: 400,  overflow: 'hidden',  width: '100%'  }} src={step.imgPath}  alt={step.label} />
                           ) : null}
                     </div>
                 ))}
 
           </AutoPlaySwipeableViews>
+
+
+
+          <Paper  square  elevation={0}  sx={{ alignItems: 'center',  height: 40 }}>
+
+              <Typography sx={{ fontSize:{xs:'x-small', md:'medium' }, pt:'0.7rem',textAlign:'center', justifyContent:'center', alignSelf:'center',  fontSize:{ xs:'x-small', md:'large' }  }} >
+                  {images[activeStep].label}  
+              </Typography>
+
+          </Paper>
+
 
 
           <MobileStepper  steps={maxSteps}  position="static"  activeStep={activeStep} 
