@@ -7,6 +7,13 @@
     height: 100%;
 }
 
+
+  .palabra_resaltada{
+      color: black;
+  }
+
+
+
     .proyectos_title{
         font-size: xx-large;
         text-align: left;
@@ -15,6 +22,9 @@
     }
         .title-top{
             color: brown;
+            font-size: x-large;
+            display: flex;
+            align-items: center;
         }
 
 

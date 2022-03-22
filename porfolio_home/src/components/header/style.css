@@ -40,3 +40,9 @@
                     .tab-desactivate:hover{
                         cursor: pointer;
                     }
+
+
+.logoPorfolio{
+    height: 50px;
+    width: 50px;
+}

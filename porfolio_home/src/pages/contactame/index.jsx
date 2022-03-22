@@ -7,9 +7,9 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import './style.css';
-import twiter from '../../images/Twiter.png';
-import Instagram from '../../images/Instagram.png';
-import Outlook from '../../images/Outlook.jpg';
+// import twiter from '../../images/Twiter.png';
+// import Instagram from '../../images/Instagram.png';
+// import Outlook from '../../images/Outlook.jpg';
 import Stack from '@mui/material/Stack';
 
 
@@ -26,9 +26,9 @@ export default function Contactame(){
 
                                 <ListItem>
                                 
-                                        <ListItemAvatar>
+                                        {/* <ListItemAvatar>
                                             <Avatar alt="Remy Sharp" src={twiter} />
-                                        </ListItemAvatar>
+                                        </ListItemAvatar> */}
                                         
                                         <ListItemText secondary={
 
@@ -46,9 +46,9 @@ export default function Contactame(){
 
                                 <ListItem>
 
-                                        <ListItemAvatar>
+                                        {/* <ListItemAvatar>
                                             <Avatar alt="Remy Sharp" src={Instagram} />
-                                        </ListItemAvatar>
+                                        </ListItemAvatar> */}
 
                                         <ListItemText secondary={
                                                     <React.Fragment>
@@ -65,9 +65,9 @@ export default function Contactame(){
 
                                 <ListItem>
 
-                                        <ListItemAvatar>
+                                        {/* <ListItemAvatar>
                                             <Avatar alt="Remy Sharp" src={Outlook} />
-                                        </ListItemAvatar>
+                                        </ListItemAvatar> */}
 
                                         <ListItemText secondary={
                                                     <React.Fragment>

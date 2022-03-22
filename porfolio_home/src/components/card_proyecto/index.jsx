@@ -19,7 +19,7 @@ export default function CardProyecto(props) {
 
             <Stack sx={{ alignItems:'center', width:'100%'}}> 
 
-                        <Card sx={{width:'80%', justifySelf:'center', justifyContent:'center' }}>
+                        <Card sx={{borderRadius:'25px', width:'80%', justifySelf:'center', justifyContent:'center' }}>
 
                               <div className='card-container-carrusel-description-link'>
 
@@ -29,7 +29,7 @@ export default function CardProyecto(props) {
                                           </Typography>
 
 
-                                          <Stack sx={{ alignSelf:'center', width:'100%' }} >
+                                          <Stack sx={{ alignSelf:'center', width:'80%' }} >
 
                                                     <SwipeableTextMobileStepper
                                                             label_1 = {props.label_1}
@@ -46,19 +46,19 @@ export default function CardProyecto(props) {
 
                                           <div className='card-container-description-link'>
 
-                                                      <CardContent>  
+                                                      <CardContent sx={{  }}>  
 
-                                                            <Typography gutterBottom variant="h5" component="div">
+                                                            <Typography sx={{ textDecoration:'underline', fontWeight:'bold' }} gutterBottom variant="h5" component="div">
                                                                   <div className='titulo-descripcion'>{props.cardTitle}</div>
                                                             </Typography>
 
-                                                            <Typography sx={{fontSize:{ xs:'x-small', md:'medium' }  }} variant="body2" color="text.secondary">
-
-                                                                  <div> {props.cardLine1} </div>
-                                                                  <div> {props.cardLine2} </div>
-                                                                  <div> {props.cardLine3} </div>
-                                                                  <div> {props.cardLine4} </div>
-                                                                  
+                                                            <Typography variant="body2" color="text.secondary">
+                                                                  <Stack sx={{ gap:'0.5rem' }}>
+                                                                        <div> {props.cardLineInfo} </div>
+                                                                        {/* <div> {props.cardLine2} </div>
+                                                                        <div> {props.cardLine3} </div>
+                                                                        <div> {props.cardLine4} </div> */}
+                                                                  </Stack>
                                                             </Typography>
 
                                                       </CardContent>

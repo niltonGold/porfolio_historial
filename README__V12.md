@@ -1,1 +1,0 @@
-# porfolio v12 card mejorado
