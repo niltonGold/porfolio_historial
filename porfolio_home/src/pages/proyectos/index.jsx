@@ -2,6 +2,8 @@
 import './style.css';
 import Stack from '@mui/material/Stack';
 import MoodIcon from '@mui/icons-material/Mood';
+import Typography from '@mui/material/Typography';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 
 
@@ -21,7 +23,9 @@ import kanbanImagen3 from "../../components/imagenes/proyecto_kanban/kanban_drag
 import weatherAppImagen1 from "../../components/imagenes/proyecto_weatherapp/weather_principal.jpg"
 import weatherAppImagen2 from "../../components/imagenes/proyecto_weatherapp/weather_CiudadClima.jpg"
 import weatherAppImagen3 from "../../components/imagenes/proyecto_weatherapp/weather_CelciusFarentheit.jpg"
+
 import CardProyecto from '../../components/card_proyecto';
+import { Tab } from '@mui/material';
 
 
 
@@ -32,85 +36,289 @@ export default function Proyectos(){
         // PROYECTO 1 .- Informacion Card WebResposiveAnimada
 
                 // Imagenes y Etiquetas de las Imagenes
-                        const etiqueta1 = '1';
-                        const imagen1 = webResponsiveImagen1;
+                        const webResponsiveEtiqueta1 = 'Cards giratorios';
+                        const webResponsive_Imagen1 = webResponsiveImagen1;
                 
-                        const etiqueta2 = '2';
-                        const imagen2 = webResponsiveImagen2;
+                        const webResponsiveEtiqueta2 = 'Tablero giratorio';
+                        const webResponsive_Imagen2 = webResponsiveImagen2;
                 
-                        const etiqueta3 = '3';
-                        const imagen3 = webResponsiveImagen3;
+                        const webResponsiveEtiqueta3 = 'Formulario con responsive';
+                        const webResponsive_Imagen3 = webResponsiveImagen3;
+
+
+                // Card Informacióntt
+                        const webResponsiveCardTitulo = 'WebResponsiveAnimada';
+
+                        function webResponsiveCardInfo(){
+                                return(
+                                        <Stack sx={{ gap:'0.8rem' }}>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Desarrollo de una web responsive utilizando unicamente <b className='palabra_resaltada'>HTML</b> y <b className='palabra_resaltada'>CSS</b>  </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b>.- Clases, estructura de los elementos. </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b>.- Box model, especificidad, cascada, herencia, selectores, animaciones, transformaciones, flexbox.</Typography>
+                                        </Stack>
+                                )
+                        }
+
+
+                // Enlace al proyecto
+                        const EnlaceAlProyectoWebResponsive = 'https://webresponsiveanimada.herokuapp.com/';
+
+
+// ---------------------------------------------------------------------------------------------
+
+
+        // PROYECTO 2 .- Informacion Card El Tetris
+
+                // Imagenes y Etiquetas de las Imagenes
+                        const TetrisEtiqueta1 = 'Pantalla Principal';
+                        const TetrisImagen1 = tetrisImagen1;
+                
+                        const TetrisEtiqueta2 = 'Score';
+                        const TetrisImagen2 = tetrisImagen2;
+                
+                        const TetrisEtiqueta3 = 'Game Over';
+                        const TetrisImagen3 = tetrisImagen3;
 
 
 
                 // Card Informacióntt
-                        const cardTitulo = 'WebResponsiveAnimada';
+                        const TetrisCardTitulo = 'El Tetris';
 
-                        const cardInfoLinea1 = '-1';
-                        const cardInfoLinea2 = '-2';
-                        const cardInfoLinea3 = '-3';
-                        const cardInfoLinea4 = '-4';
+                        function TetrisCardInfo(){
+                                return(
+                                        <Stack sx={{ gap:'0.8rem' }}>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Juego clásico utilizando <b className='palabra_resaltada'>HTML</b>, <b className='palabra_resaltada'>CSS</b> y <b className='palabra_resaltada'>Vanilla JS</b> </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b> </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> .- Box model, herencia, selectores, transformaciones, estilos, colores. </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Bom y gestión del DOM </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> - No tiene responsive </Typography>
+                                        </Stack>
+                                )
+                        }
 
 
                 // Enlace al proyecto
-                        const EnlaceAlProyecto = 'https://webresponsiveanimada.herokuapp.com/'
-                        
+                        const EnlaceAlProyectoTetris = 'https://webtetris.herokuapp.com/';     
+                
+                
+// ---------------------------------------------------------------------------------------------
+
+
+        // PROYECTO 3 .- Informacion Card Kanban
+
+                // Imagenes y Etiquetas de las Imagenes
+                        const KanbanEtiqueta1 = 'Columnas y Tasks';
+                        const KanbanImagen1 = kanbanImagen1;
+                
+                        const KanbanEtiqueta2 = 'Filtro de Tasks';
+                        const KanbanImagen2 = kanbanImagen2;
+                
+                        const KanbanEtiqueta3 = 'Drag And Drop';
+                        const KanbanImagen3 = kanbanImagen3;
+
+
+                // Card Informacióntt
+                        const KanbanCardTitulo = 'Tablero Kanban';
+
+                        function KanbanCardInfo(){
+                                return(
+                                        <Stack sx={{ gap:'0.8rem' }}>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Aplicación web para gestionar proyectos con la metodología <b className='palabra_resaltada'>KANBAN</b> utilizando <b className='palabra_resaltada'>HTML</b>, <b className='palabra_resaltada'>CSS</b>, <b className='palabra_resaltada'>JS</b> Y <b className='palabra_resaltada'>REACT</b></Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b> </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> .- Box model, display, herencia, color, estilo. </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Condicionales, arrays, gestion de arrays. </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> REACT JS </b> .- Creación, consumición y gestion de componentes, paso de informacion de un <b className='palabra_resaltada'>padre al hijo</b> y de un <b className='palabra_resaltada'>hijo al padre</b> </Typography>
+                                        </Stack>
+                                )
+                        }
+
+
+                // Enlace al proyecto
+                        const EnlaceAlProyectoKanban = 'https://tablerokanbannil.herokuapp.com/';                           
        
+
+// ---------------------------------------------------------------------------------------------
+
+
+        // PROYECTO 4 .- Informacion Card WeatherApp
+
+                // Imagenes y Etiquetas de las Imagenes
+                        const weatherAppEtiqueta1 = 'Pantalla Principal';
+                        const weatherApp_Imagen1 = weatherAppImagen1;
+                
+                        const weatherAppEtiqueta2 = 'Clima de una Ciudad';
+                        const weatherApp_Imagen2 = weatherAppImagen2;
+                
+                        const weatherAppEtiqueta3 = 'Cambio de Celcius a Farentheit y viceversa';
+                        const weatherApp_Imagen3 = weatherAppImagen3;
+
+
+                // Card Informacióntt
+                        const weatherAppCardTitulo = 'WeatherApp';
+
+                        function weatherAppCardInfo(){
+                                return(
+                                        <Stack sx={{ gap:'0.8rem' }}>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Aplicación web para poder vizualizar el clima en tiempo real de una ciudad determinada usando una <b className='palabra_resaltada'>API</b> </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b>.- Clases, estructura de los elementos. </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Condicionales, arrays, gestion de arrays. </Typography>
+                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> REACT JS </b> .- Creación de componentes de clase y de función, consumición y gestion de componentes
+                                                                                                                                                                 dentro de otro componente, pasar información de un componente <b className='palabra_resaltada'>padre al hijo</b>
+                                                                                                                                                                 , gestion del ciclo de vida de un componente, utilización de <b className='palabra_resaltada'>Hooks (useState, useEffect)</b> </Typography>
+                                        </Stack>
+                                )
+                        }
+
+
+                // Enlace al proyecto
+                        const EnlaceAlProyectoweatherApp = 'https://weatherappnil.herokuapp.com/';                     
+
+
 
 
     return(
  
-           <Stack sx={{ gap:'1rem', pt:'3rem'}}>
+           <Stack sx={{ gap:'1rem', pt:'2rem'}}>
   
                   
-                        <Stack sx={{ borderRadius:'25px', pt:'1rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
-                        <p className="title-top"> <MoodIcon sx={{ fontSize:'3rem' }} /> HOLA SOY NILTON MEDINA SAYAN</p>
-                        <p> y aqui te presento algunos de mismo proyectos </p>
-                        <p> para que sepas cuales son algunas de mis habilidades </p>
+                        <Stack sx={{ gap:'0.8rem', fontSize:'large', borderRadius:'25px', pt:'0.5rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
+
+                                <p className="title-top"> 
+                                        HOLA SOY NILTON MEDINA SAYAN
+                                        <MoodIcon sx={{ fontSize:'3rem' }} /> 
+                                </p>
+
+                                        {/* -------------------------------------------- */}
+
+                                <Typography sx={{ gap:'0.4rem', diplay:'flex', flexDirection: 'row' }} >
+                                        Soy un 
+                                        <b> WEB DEVELOPER FULL STACK JUNIOR </b>
+                                </Typography>
+
+                                        {/* -------------------------------------------- */}
+
+                                <Typography sx={{  gap:'0.4rem', diplay:'flex', flexDirection: 'row' }} >     
+                                        Con mis conocimientos soy capaz de desarrollar páginas web
+                                        <b> End to End </b>
+                                        , es decir el
+                                        <b> Front End </b> 
+                                        hasta el
+                                        <b> Back End </b>
+                                        
+                                </Typography>
+                        
+                        </Stack>
+
+
+                        <Stack sx={{ gap:'1rem', flexDirection:'row', justifyContent:'center', fontSize:'x-large', borderRadius:'25px', pt:'0.5rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
+
+                                <Stack sx={{ display:'flex', alignSelf:'center' }}> Proyectos </Stack>
+                                <ArrowDownwardIcon sx={{ fontSize:'3rem' }}/>
+
                         </Stack>
                           
                         
-
+                {/* Card Proyecto WebResponsiveAnimada */}
                         <Stack sx={{ justifyContent:'center', borderRadius:'25px', pt:'1rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
                                 
-                                
                                 <CardProyecto
-                                        label_1 = {etiqueta1}
-                                        imagen_1 = {imagen1}
+                                        label_1 = {webResponsiveEtiqueta1}
+                                        imagen_1 = {webResponsive_Imagen1}
 
-                                        label_2 = {etiqueta2}
-                                        imagen_2 = {imagen2}
+                                        label_2 = {webResponsiveEtiqueta2}
+                                        imagen_2 = {webResponsive_Imagen2}
                                         
-                                        label_3 = {etiqueta3}
-                                        imagen_3 = {imagen3}  
+                                        label_3 = {webResponsiveEtiqueta3}
+                                        imagen_3 = {webResponsive_Imagen3}  
                                         
                                         
-                                        cardTitle = {cardTitulo}
+                                        cardTitle = {webResponsiveCardTitulo}
 
-                                        cardLine1= {cardInfoLinea1}
-                                        cardLine2= {cardInfoLinea2}
-                                        cardLine3= {cardInfoLinea3}
-                                        cardLine4= {cardInfoLinea4}
+                                        cardLineInfo= {webResponsiveCardInfo()}
+                                        // cardLine2= {webResponsiveCardInfoLinea2}
+                                        // cardLine3= {webResponsiveCardInfoLinea3}
+                                        // cardLine4= {webResponsiveCardInfoLinea4}
 
-                                        linkProyect = {EnlaceAlProyecto}
-                                        
-                                        />
+                                        linkProyect = {EnlaceAlProyectoWebResponsive}  />
+
                         </Stack> 
 
 
+
+                {/* Card Proyecto El Tetris */}
                         <Stack sx={{ borderRadius:'25px', pt:'1rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>             
-                                {/* <CardTetris/> */}
+                                <CardProyecto
+                                        label_1 = {TetrisEtiqueta1}
+                                        imagen_1 = {TetrisImagen1}
+
+                                        label_2 = {TetrisEtiqueta2}
+                                        imagen_2 = {TetrisImagen2}
+                                        
+                                        label_3 = {TetrisEtiqueta3}
+                                        imagen_3 = {TetrisImagen3}  
+                                        
+                                        
+                                        cardTitle = {TetrisCardTitulo}
+
+                                        cardLineInfo= {TetrisCardInfo()}
+                                        // cardLine2= {TetrisCardInfoLinea2}
+                                        // cardLine3= {TetrisCardInfoLinea3}
+                                        // cardLine4= {TetrisCardInfoLinea4}
+
+                                        linkProyect = {EnlaceAlProyectoTetris}  />                                
                         </Stack>
+
+
                         
-
+                {/* Card Proyecto Kanban */}
                         <Stack sx={{ borderRadius:'25px', pt:'1rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
-                                {/* <CardKanban/> */}
+                                <CardProyecto
+                                        label_1 = {KanbanEtiqueta1}
+                                        imagen_1 = {KanbanImagen1}
+
+                                        label_2 = {KanbanEtiqueta2}
+                                        imagen_2 = {KanbanImagen2}
+                                        
+                                        label_3 = {KanbanEtiqueta3}
+                                        imagen_3 = {KanbanImagen3}  
+                                        
+                                        
+                                        cardTitle = {KanbanCardTitulo}
+
+                                        cardLineInfo= {KanbanCardInfo()}
+                                        // cardLine2= {KanbanCardInfoLinea2}
+                                        // cardLine3= {KanbanCardInfoLinea3}
+                                        // cardLine4= {KanbanCardInfoLinea4}
+
+                                        linkProyect = {EnlaceAlProyectoKanban}  />                                
                         </Stack>
 
 
+
+                {/* Card Proyecto WeatherApp */}
                         <Stack sx={{ borderRadius:'25px', pt:'1rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
-                                {/* <CardWeather/> */}
+                                <CardProyecto
+                                        label_1 = {weatherAppEtiqueta1}
+                                        imagen_1 = {weatherApp_Imagen1}
+
+                                        label_2 = {weatherAppEtiqueta2}
+                                        imagen_2 = {weatherApp_Imagen2}
+                                        
+                                        label_3 = {weatherAppEtiqueta3}
+                                        imagen_3 = {weatherApp_Imagen3}  
+                                        
+                                        
+                                        cardTitle = {weatherAppCardTitulo}
+
+                                        cardLineInfo= {weatherAppCardInfo()}
+                                        // cardLine2= {weatherAppCardInfoLinea2}
+                                        // cardLine3= {weatherAppCardInfoLinea3}
+                                        // cardLine4= {weatherAppCardInfoLinea4}
+
+                                        linkProyect = {EnlaceAlProyectoweatherApp}  />                               
                         </Stack>
+
 
 
             </Stack>
