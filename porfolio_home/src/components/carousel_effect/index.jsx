@@ -81,7 +81,7 @@ function SwipeableTextMobileStepper(props) {
   return (
     
     // <Box sx={{ alignSelf:'center', maxWidth: 600, flexGrow: 1, p:'1rem' }}>
-    <Box sx={{ alignSelf:'center', maxWidth: { xs:300, sm:400 } , flexGrow: 1, p:'1rem' }}>
+    <Box sx={{ alignSelf:'center', maxWidth: { xs:300, sm:400 } , flexGrow: 1, p:{ xs:'0.001rem', sm:'1rem'} }}>
       
 
           {/* <Paper  square  elevation={0}  sx={{ alignItems: 'center',  height: 40 }}>
@@ -117,7 +117,7 @@ function SwipeableTextMobileStepper(props) {
 
 
 
-          <MobileStepper  steps={maxSteps}  position="static"  activeStep={activeStep} 
+          <MobileStepper sx={{ pb:'0.1rem' }}  steps={maxSteps}  position="static"  activeStep={activeStep} 
                   nextButton={
                       <Button sx={{  fontSize:{ xs:'x-small', md:'large' }  }}  size="small"  onClick={handleNext}  disabled={activeStep === maxSteps - 1}  >
                           Next

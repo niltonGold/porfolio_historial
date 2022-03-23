@@ -19,7 +19,7 @@ export default function CardProyecto(props) {
 
             <Stack sx={{ alignItems:'center', width:'100%'}}> 
 
-                        <Card sx={{borderRadius:'25px', width:'80%', justifySelf:'center', justifyContent:'center' }}>
+                        <Card sx={{ borderRadius:'25px', width:'80%', justifySelf:'center', justifyContent:'center' }}>
 
                               <div className='card-container-carrusel-description-link'>
 
@@ -44,22 +44,24 @@ export default function CardProyecto(props) {
 
                                           </Stack>
 
-                                          <div className='card-container-description-link'>
+                                          {/* <div className='card-container-description-link'> */}
+                                          <Stack sx={{ width:'80%', alignSelf:{ xs:'center', sm:'flex-start' } }}>
+                                          
+                                                      {/* <CardContent sx={{pt:'0.001rem', backgroundColor:'red' }}>   */}
+                                                      <CardContent sx={{pt:{ xs:'0.001rem', sm:'1rem' } }}>
+                                                            {/* <Stack sx={{ backgroundColor: 'yellow', width:'100%', wordBreak:'break-all' }}> */}
+                                                                  <Typography sx={{ textDecoration:'underline', fontWeight:'bold' }} gutterBottom variant="h5" component="div">
+                                                                        <div className='titulo-descripcion'>{props.cardTitle}</div>
+                                                                  </Typography>
 
-                                                      <CardContent sx={{  }}>  
+                                                                  <Typography variant="body2" color="text.secondary">
+                                                                        <Stack sx={{ gap:'0.5rem' }}>
 
-                                                            <Typography sx={{ textDecoration:'underline', fontWeight:'bold' }} gutterBottom variant="h5" component="div">
-                                                                  <div className='titulo-descripcion'>{props.cardTitle}</div>
-                                                            </Typography>
-
-                                                            <Typography variant="body2" color="text.secondary">
-                                                                  <Stack sx={{ gap:'0.5rem' }}>
-                                                                        <div> {props.cardLineInfo} </div>
-                                                                        {/* <div> {props.cardLine2} </div>
-                                                                        <div> {props.cardLine3} </div>
-                                                                        <div> {props.cardLine4} </div> */}
-                                                                  </Stack>
-                                                            </Typography>
+                                                                              <div> {props.cardLineInfo} </div>
+                                                                             
+                                                                        </Stack>
+                                                                  </Typography>
+                                                            {/* </Stack> */}
 
                                                       </CardContent>
 
@@ -79,9 +81,9 @@ export default function CardProyecto(props) {
                                                             </a>
 
                                                       </div>
-                                                
                                           
-                                          </div>
+                                          </Stack>
+                                          {/* </div> */}
                               </div>
                         </Card>
 
