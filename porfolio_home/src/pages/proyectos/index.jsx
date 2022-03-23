@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 
-
 import webResponsiveImagen1 from "../../components/imagenes/proyecto_webresponsiveanimada/cards_giratorios.jpg"
 import webResponsiveImagen2 from "../../components/imagenes/proyecto_webresponsiveanimada/tablero_giratorio.jpg"
 import webResponsiveImagen3 from "../../components/imagenes/proyecto_webresponsiveanimada/formulario_responsive.jpg"
@@ -25,7 +24,9 @@ import weatherAppImagen2 from "../../components/imagenes/proyecto_weatherapp/wea
 import weatherAppImagen3 from "../../components/imagenes/proyecto_weatherapp/weather_CelciusFarentheit.jpg"
 
 import CardProyecto from '../../components/card_proyecto';
-import { Tab } from '@mui/material';
+import { Avatar, ListItemAvatar } from '@mui/material';
+
+import ImagenPorfolio1 from '../../components/imagenes/reactImagenPorfolio.png'
 
 
 
@@ -149,7 +150,7 @@ export default function Proyectos(){
                         const weatherAppEtiqueta2 = 'Clima de una Ciudad';
                         const weatherApp_Imagen2 = weatherAppImagen2;
                 
-                        const weatherAppEtiqueta3 = 'Cambio de Celcius a Farentheit y viceversa';
+                        const weatherAppEtiqueta3 = 'Celcius a Farentheit y viceversa';
                         const weatherApp_Imagen3 = weatherAppImagen3;
 
 
@@ -179,32 +180,39 @@ export default function Proyectos(){
 
     return(
  
-           <Stack sx={{ gap:'1rem', pt:'2rem'}}>
+           <Stack sx={{ gap:'1rem', pt:'2rem', pb:'2rem' }}>
   
                   
-                        <Stack sx={{ gap:'0.8rem', fontSize:'large', borderRadius:'25px', pt:'0.5rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
+                        <Stack sx={{ alignItems:'center', gap:'1rem', borderRadius:'25px', pt:'0.5rem', pb:'1rem', pl:'1rem',pr:'1rem', bgcolor : 'secondary.main' }}>
 
-                                <p className="title-top"> 
-                                        HOLA SOY NILTON MEDINA SAYAN
-                                        <MoodIcon sx={{ fontSize:'3rem' }} /> 
-                                </p>
+                                {/* <p className="title-top"> */}
+                                <Stack sx={{ flexDirection:{ xs:'column', sm:'row' }, alignItems:'center', gap:'1rem' }} >
+
+                                        <Typography sx={{ fontWeight:'bold', fontSize:'xx-large' }}> NILTON MEDINA SAYAN </Typography>
+                                        {/* <MoodIcon sx={{ fontSize:'3rem' }} />  */}
+
+                                        <Avatar sx={{ width:'7rem', height:'7rem' }} alt="Remy Sharp" src={ImagenPorfolio1}></Avatar>
+ 
+                                </Stack>
+                                {/* </p> */}
 
                                         {/* -------------------------------------------- */}
 
-                                <Typography sx={{ gap:'0.4rem', diplay:'flex', flexDirection: 'row' }} >
+                                <Typography sx={{ fontSize:{ xs:'small', sm:'x-large' }, flexDirection: 'row' }} >
                                         Soy un 
                                         <b> WEB DEVELOPER FULL STACK JUNIOR </b>
                                 </Typography>
 
                                         {/* -------------------------------------------- */}
 
-                                <Typography sx={{  gap:'0.4rem', diplay:'flex', flexDirection: 'row' }} >     
+                                <Typography sx={{ fontSize:{ xs:'small', sm:'x-large' },  gap:'0.4rem', diplay:'flex', flexDirection: 'row' }} >     
                                         Con mis conocimientos soy capaz de desarrollar páginas web
                                         <b> End to End </b>
                                         , es decir el
                                         <b> Front End </b> 
                                         hasta el
                                         <b> Back End </b>
+                                        , aqui presento algunos de mis proyectos para que se pueda apreciar algunas de mis habilidades. 
                                         
                                 </Typography>
                         
