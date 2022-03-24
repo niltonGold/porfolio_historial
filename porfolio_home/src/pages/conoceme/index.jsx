@@ -10,10 +10,10 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import { Avatar } from '@mui/material';
-import conocemeImagen from '../../components/imagenes/shaka.png'
+import conocemeImagen from '../../components/imagenes/proyecto_porfoliohome/shaka.png'
 import Button from '@mui/material/Button';
 
-import pdf from '../../components/imagenes/CurriculumVitae.pdf'
+import pdf from '../../components/documents/curriculumVitae.pdf'
 
 
 
@@ -32,7 +32,7 @@ export default function Conocome(){
                         </Stack> 
                         
                        
-                        <Box sx={{ textAlign: 'justify', width:'60%', fontSize:{ xs:'small', sm:'x-large' } }} >!Hola soy Nilton Medina Sayan y aqui te comento como soy a nivel un poco mas personal</Box>
+                        <Stack sx={{ textAlign: 'justify', width:'60%', fontSize:{ xs:'small', sm:'x-large' } }} >!Hola soy Nilton Medina Sayan y aqui te comento como soy a nivel un poco mas personal</Stack>
                       
                         <Stack sx={{ fontSize:'3rem' }} >👇</Stack>
                     </Stack>
@@ -142,13 +142,11 @@ export default function Conocome(){
 
                                 <Stack sx={{ fontSize:'3rem', pb:'1rem', display:{ xs:'none', sm:'block' } }}>👉</Stack>
 
-                                <Button variant="contained" sx={{ height:'4rem' }} >
-
-                                    <a className='porfolio_link_download' href={pdf} target="_blank" rel="noopener noreferrer" download="CurriculumVitae.pdf">
-                                        DESCARGA MI CV
-                                    </a>           
-                                                            
-                                </Button>
+                                <a className='porfolio_link_download' href={pdf} target="_blank" rel="noopener noreferrer" download="CurriculumVitae.pdf">
+                                        <Button variant="contained" sx={{ height:'4rem', color:'white', fontSize:'x-large', fontWeight:'bold' }} >          
+                                                DESCARGA MI CV                 
+                                        </Button>
+                                </a>  
 
                                 <Stack sx={{ fontSize:'3rem', pb:'1rem', display:{ xs:'none', sm:'block' } }}>👈</Stack>
 
