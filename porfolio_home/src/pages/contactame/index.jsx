@@ -11,14 +11,25 @@ import './style.css';
 // import Instagram from '../../images/Instagram.png';
 // import Outlook from '../../images/Outlook.jpg';
 import Stack from '@mui/material/Stack';
-
+import contactameImagen from '../../components/imagenes/proyecto_porfoliohome/contactame.png'
 
 export default function Contactame(){
 
     return(
-        <Stack sx={{ justifyContent: 'center', justifyContent: 'top', alignItems: 'center', height: '100vh', bgcolor:'secondary.main'}}>
+        <Stack sx={{ gap:'1rem', pt:'2rem', pb:'2rem' }}>
+            <Stack sx={{ alignItems:'center', borderRadius:'25px', bgcolor:'secondary.main', pt:'1rem', pb:'1rem' }} > 
 
-                <div className='contactame-title' >CONTACTAME</div>
+                <Stack sx={{ flexDirection:{ xs:'column', sm:'row' }, alignItems:'center', gap:'1rem' }} >
+                    <Typography sx={{ fontWeight:'bold', fontSize:'xx-large' }} >CONTACTAME</Typography>
+                    <Avatar sx={{ width:'7rem', height:'7rem' }} alt="Remy Sharp" src={contactameImagen}></Avatar>
+                </Stack>
+
+
+                <Stack sx={{ textAlign: 'justify', width:'60%', fontSize:{ xs:'small', sm:'x-large' } }} >Puedes ponerte en contacto conmigo a través de cualquiera de mis siguientes redes sociales</Stack>
+                      
+                <Stack sx={{ fontSize:'3rem' }} >👇</Stack>
+
+            </Stack>    
 
                 <div className='box1Contactame'>
 

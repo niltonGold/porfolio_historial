@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import './style.css';
 import SwichtButton from '../../switchChangeTheme';
-import logoPorfolio from '../imagenes/logoPorfolio.png'
+import logoPorfolio from '../imagenes/proyecto_porfoliohome/logoPorfolio.png'
 
 
 

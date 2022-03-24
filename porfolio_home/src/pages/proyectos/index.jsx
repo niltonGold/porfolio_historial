@@ -26,7 +26,7 @@ import weatherAppImagen3 from "../../components/imagenes/proyecto_weatherapp/wea
 import CardProyecto from '../../components/card_proyecto';
 import { Avatar, ListItemAvatar } from '@mui/material';
 
-import ImagenPorfolio1 from '../../components/imagenes/reactImagenPorfolio.png'
+import ImagenPorfolio1 from '../../components/imagenes/proyecto_porfoliohome/reactImagenPorfolio.png'
 
 
 
