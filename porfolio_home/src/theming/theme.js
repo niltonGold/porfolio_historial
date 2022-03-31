@@ -7,10 +7,15 @@ import oswald from '../fonts/Oswald-Bold.ttf'
 import { orange } from '@mui/material/colors';
 
 export const myTheme = createTheme ({
+
+
     typography:{
         fontFamily: oswald,
-       
+        body1: {
+            color: 'black'
+          }
     },
+
     palette:{
         primary:{
             main:amber[600],
@@ -21,13 +26,17 @@ export const myTheme = createTheme ({
             dark:'#ca9b52'
         },
     }
+
+
 });
 
 
 export const myDarkTheme = createTheme ({
     typography:{
         fontFamily: oswald,
-           
+        body1: {
+            color: 'white'
+          }
     },
 
     palette:{
@@ -41,5 +50,10 @@ export const myDarkTheme = createTheme ({
             dark:'#001064',
         },
     },
+
+
+    // palette: {
+    //     mode: 'dark',
+    //   },
 });
 

@@ -7,11 +7,15 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import './style.css';
-// import twiter from '../../images/Twiter.png';
-// import Instagram from '../../images/Instagram.png';
-// import Outlook from '../../images/Outlook.jpg';
 import Stack from '@mui/material/Stack';
-import contactameImagen from '../../components/imagenes/proyecto_porfoliohome/contactame.png'
+import contactameImagen from '../../components/imagenes/proyecto_porfoliohome/contactame.png';
+import imagenPrueba from '../../components/imagenes/proyecto_porfoliohome/shaka.png';
+
+import telefono from '../../components/imagenes/proyecto_porfoliohome/telefono.jpg';
+import mail from '../../components/imagenes/proyecto_porfoliohome/mail.jpg';
+import linkedin from '../../components/imagenes/proyecto_porfoliohome/linkedin.jpg';
+
+
 
 export default function Contactame(){
 
@@ -25,74 +29,73 @@ export default function Contactame(){
                 </Stack>
 
 
-                <Stack sx={{ textAlign: 'justify', width:'60%', fontSize:{ xs:'small', sm:'x-large' } }} >Puedes ponerte en contacto conmigo a través de cualquiera de mis siguientes redes sociales</Stack>
+                <Stack sx={{ textAlign: 'justify', width:'60%', fontSize:{ xs:'small', sm:'x-large' } }} >
+                    Puedes ponerte en contacto conmigo a través de cualquiera de mis siguientes redes sociales
+                </Stack>
                       
                 <Stack sx={{ fontSize:'3rem' }} >👇</Stack>
 
-            </Stack>    
+            </Stack> 
 
-                <div className='box1Contactame'>
+            
+            {/* --------------------------------------------------------------------------------- */}
+            
+            
+            <Stack sx={{ alignItems:'center', borderRadius:'25px', bgcolor:'secondary.main', pt:'1rem', pb:'1rem', justifyContent:'center' }} > 
 
-                    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-
-                                <ListItem>
-                                
-                                        {/* <ListItemAvatar>
-                                            <Avatar alt="Remy Sharp" src={twiter} />
-                                        </ListItemAvatar> */}
-                                        
-                                        <ListItemText secondary={
-
-                                                    <React.Fragment>
-                                                        <Typography  sx={{ display: 'inline' }}  component="span"  variant="body1"  color="text.primary"  >
-                                                            Ali Connors
-                                                        </Typography>
-                                                    </React.Fragment> }/>
-                                    
-                                </ListItem>
-
-
-                                    <Divider variant="inset" component="li" />
+           
+                        <Stack sx={{ gap:'1rem', flexDirection:'row', alignItems:'center', width:'60%', justifyContent:'left' }}>
+                        
+                            <Avatar sx={{ width:'4rem', height:'4rem' }} alt="Remy Sharp" src={telefono}></Avatar>
+                  
+                            {/* <Typography  sx={{ display: 'inline', fontSize:{ xs:'small', sm:'x-large' } }} > */}
+                            <Typography  sx={{ display: 'inline', fontSize:'x-large' }} >
+                                650 347 741
+                            </Typography>
+                        
+                        </Stack>
+                      
+            </Stack> 
 
 
-                                <ListItem>
+            {/* --------------------------------------------------------------------------------- */}
+            
+            
+            <Stack sx={{ alignItems:'center', borderRadius:'25px', bgcolor:'secondary.main', pt:'1rem', pb:'1rem', justifyContent:'center' }} > 
 
-                                        {/* <ListItemAvatar>
-                                            <Avatar alt="Remy Sharp" src={Instagram} />
-                                        </ListItemAvatar> */}
+           
+                        <Stack sx={{ gap:'1rem', flexDirection:'row', alignItems:'center', width:'60%', justifyContent:'left' }}>
+                        
+                            <Avatar sx={{ width:'4rem', height:'4rem' }} alt="Remy Sharp" src={mail}></Avatar>
+                  
+                            {/* <Typography  sx={{ display: 'inline', fontSize:{ xs:'small', sm:'x-large' } }} > */}
+                            <Typography  sx={{ wordBreak:'break-all', display: 'inline', fontSize:'x-large' }} >
+                                niltonenrique3000@hotmail.com
+                            </Typography>
+                        
+                        </Stack>
+                      
+            </Stack> 
 
-                                        <ListItemText secondary={
-                                                    <React.Fragment>
-                                                        <Typography  sx={{ display: 'inline' }}  component="span"  variant="body1"  color="text.primary"  >
-                                                            Ali Connors
-                                                        </Typography>
-                                                    </React.Fragment> }/>
+            {/* --------------------------------------------------------------------------------- */}
+            
+            
+            <Stack sx={{ alignItems:'center', borderRadius:'25px', bgcolor:'secondary.main', pt:'1rem', pb:'1rem', justifyContent:'center' }} > 
 
-                                </ListItem>
-
-
-                                    <Divider variant="inset" component="li" />
-
-
-                                <ListItem>
-
-                                        {/* <ListItemAvatar>
-                                            <Avatar alt="Remy Sharp" src={Outlook} />
-                                        </ListItemAvatar> */}
-
-                                        <ListItemText secondary={
-                                                    <React.Fragment>
-                                                        <Typography  sx={{ display: 'inline' }}  component="span"  variant="body1"  color="text.primary"  >
-                                                            Ali Connors
-                                                        </Typography>
-                                                    </React.Fragment> }/>
-
-                                </ListItem>
-
-                    </List>
-
-                </div>
-
+           
+                        <Stack sx={{ gap:'1rem', flexDirection:'row', alignItems:'center', width:'60%', justifyContent:'left' }}>
+                        
+                            <Avatar sx={{ width:'4rem', height:'4rem' }} alt="Remy Sharp" src={linkedin}></Avatar>
+                  
+                            {/* <Typography  sx={{ display: 'inline', fontSize:{ xs:'small', sm:'x-large' } }} > */}
+                            <Typography  sx={{ display: 'inline', fontSize:'x-large' }} >
+                                Nilton Medina Sayan
+                            </Typography>
+                        
+                        </Stack>
+                      
+            </Stack> 
+             
         </Stack>
 
     );

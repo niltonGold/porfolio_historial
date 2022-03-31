@@ -119,7 +119,7 @@ function SwipeableTextMobileStepper(props) {
 
           <MobileStepper sx={{ pb:'0.1rem' }}  steps={maxSteps}  position="static"  activeStep={activeStep} 
                   nextButton={
-                      <Button sx={{  fontSize:{ xs:'x-small', md:'large' }  }}  size="small"  onClick={handleNext}  disabled={activeStep === maxSteps - 1}  >
+                      <Button sx={{ ":hover":{ backgroundColor:'primary.main', color:'white' }, textTransform: 'capitalize', fontSize:{ xs:'x-small', md:'large' }  }}  size="small"  onClick={handleNext}  disabled={activeStep === maxSteps - 1}  >
                           Next
                           {theme.direction === 'rtl' ? (
                             <KeyboardArrowLeft />
@@ -130,7 +130,7 @@ function SwipeableTextMobileStepper(props) {
                   }
 
                   backButton={
-                      <Button sx={{  fontSize:{ xs:'x-small', md:'large' }  }} size="small" onClick={handleBack} disabled={activeStep === 0}>
+                      <Button sx={{ ":hover":{ backgroundColor:'primary.main', color:'white' }, textTransform: 'capitalize', fontSize:{ xs:'x-small', md:'large' }  }} size="small" onClick={handleBack} disabled={activeStep === 0}>
                           {theme.direction === 'rtl' ? (
                             <KeyboardArrowRight />
                           ) : (

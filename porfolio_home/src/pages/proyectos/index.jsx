@@ -53,9 +53,9 @@ export default function Proyectos(){
                         function webResponsiveCardInfo(){
                                 return(
                                         <Stack sx={{ gap:'0.8rem' }}>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Desarrollo de una web responsive utilizando unicamente <b className='palabra_resaltada'>HTML</b> y <b className='palabra_resaltada'>CSS</b>  </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b>.- Clases, estructura de los elementos. </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b>.- Box model, especificidad, cascada, herencia, selectores, animaciones, transformaciones, flexbox.</Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> Desarrollo de una web responsive utilizando unicamente <b className='palabra_resaltada'>HTML</b> y <b className='palabra_resaltada'>CSS</b>  </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b>.- Clases, estructura de los elementos. </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b>.- Box model, especificidad, cascada, herencia, selectores, animaciones, transformaciones, flexbox.</Typography>
                                         </Stack>
                                 )
                         }
@@ -88,11 +88,11 @@ export default function Proyectos(){
                         function TetrisCardInfo(){
                                 return(
                                         <Stack sx={{ gap:'0.8rem' }}>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Juego clásico utilizando <b className='palabra_resaltada'>HTML</b>, <b className='palabra_resaltada'>CSS</b> y <b className='palabra_resaltada'>Vanilla JS</b> </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b> </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> .- Box model, herencia, selectores, transformaciones, estilos, colores. </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Bom y gestión del DOM </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> - No tiene responsive </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> Juego clásico utilizando <b className='palabra_resaltada'>HTML</b>, <b className='palabra_resaltada'>CSS</b> y <b className='palabra_resaltada'>Vanilla JS</b> </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b> </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> .- Box model, herencia, selectores, transformaciones, estilos, colores. </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Bom y gestión del DOM </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> - No tiene responsive </Typography>
                                         </Stack>
                                 )
                         }
@@ -124,11 +124,11 @@ export default function Proyectos(){
                         function KanbanCardInfo(){
                                 return(
                                         <Stack sx={{ gap:'0.8rem' }}>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Aplicación web para gestionar proyectos con la metodología <b className='palabra_resaltada'>KANBAN</b> utilizando <b className='palabra_resaltada'>HTML</b>, <b className='palabra_resaltada'>CSS</b>, <b className='palabra_resaltada'>JS</b> Y <b className='palabra_resaltada'>REACT</b></Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b> </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> .- Box model, display, herencia, color, estilo. </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Condicionales, arrays, gestion de arrays. </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> REACT JS </b> .- Creación, consumición y gestion de componentes, paso de informacion de un <b className='palabra_resaltada'>padre al hijo</b> y de un <b className='palabra_resaltada'>hijo al padre</b> </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> Aplicación web para gestionar proyectos con la metodología <b className='palabra_resaltada'>KANBAN</b> utilizando <b className='palabra_resaltada'>HTML</b>, <b className='palabra_resaltada'>CSS</b>, <b className='palabra_resaltada'>JS</b> Y <b className='palabra_resaltada'>REACT</b></Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b> </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> .- Box model, display, herencia, color, estilo. </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Condicionales, arrays, gestion de arrays. </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> REACT JS </b> .- Creación, consumición y gestion de componentes, paso de informacion de un <b className='palabra_resaltada'>padre al hijo</b> y de un <b className='palabra_resaltada'>hijo al padre</b> </Typography>
                                         </Stack>
                                 )
                         }
@@ -159,12 +159,12 @@ export default function Proyectos(){
 
                         function weatherAppCardInfo(){
                                 return(
-                                        <Stack sx={{ gap:'0.8rem' }}>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> Aplicación web para poder vizualizar el clima en tiempo real de una ciudad determinada usando una <b className='palabra_resaltada'>API</b> </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b>.- Clases, estructura de los elementos. </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Condicionales, arrays, gestion de arrays. </Typography>
-                                                <Typography sx={{ fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> REACT JS </b> .- Creación de componentes de clase y de función, consumición y gestion de componentes
+                                        <Stack sx={{ color:'black', gap:'0.8rem' }}>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> Aplicación web para poder vizualizar el clima en tiempo real de una ciudad determinada usando una <b className='palabra_resaltada'>API</b> </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> HTML</b>.- Clases, estructura de los elementos. </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> CSS </b> </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> JS </b> .- Condicionales, arrays, gestion de arrays. </Typography>
+                                                <Typography sx={{ color:'black', fontSize:{ xs:'x-small', sm:'medium' }  }}> -<b className='palabra_resaltada'> REACT JS </b> .- Creación de componentes de clase y de función, consumición y gestion de componentes
                                                                                                                                                                  dentro de otro componente, pasar información de un componente <b className='palabra_resaltada'>padre al hijo</b>
                                                                                                                                                                  , gestion del ciclo de vida de un componente, utilización de <b className='palabra_resaltada'>Hooks (useState, useEffect)</b> </Typography>
                                         </Stack>
