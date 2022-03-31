@@ -68,15 +68,16 @@ export default function CardProyecto(props) {
 
                                                       <div className='link_clip'> 
 
-                                                            <InsertLinkIcon></InsertLinkIcon> 
+                                                            
 
-                                                            <a className='enlace_al_proyecto' href={props.linkProyect}>
-                                                            <Button>
-                                                                  <Typography  sx={{ textTransform: 'capitalize', fontSize:{ xs:'small', md:'large' }  }}>
-                                                                        
+                                                            <a className='enlace_al_proyecto' target="_blank" rel="noopener noreferrer" href={props.linkProyect}>
+                                                            {/* <Button sx={{ ":hover":{ backgroundColor:'primary.dark' } }} > */}
+                                                            <Button sx={{ ":hover":{ backgroundColor:'primary.main', color:'white' }, textTransform: 'capitalize', fontSize:{ xs:'small', md:'large' }, height:'2rem', mb:'1rem'    }} >
+                                                                  {/* <Typography  sx={{ color:'primary.main', textTransform: 'capitalize', fontSize:{ xs:'small', md:'large' }  }}> */}
+                                                                  <InsertLinkIcon sx={{ fontSize:'2.5rem' }}></InsertLinkIcon> 
                                                                                 Enlace Al Proyecto
                                                                           
-                                                                  </Typography>
+                                                                  {/* </Typography> */}
                                                             </Button>
                                                             </a>
 

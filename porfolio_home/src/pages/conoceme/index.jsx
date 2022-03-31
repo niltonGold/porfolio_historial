@@ -2,12 +2,6 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import './style.css';
-import PanToolIcon from '@mui/icons-material/PanTool';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import ComputerIcon from '@mui/icons-material/Computer';
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
-import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import { Avatar } from '@mui/material';
 import conocemeImagen from '../../components/imagenes/proyecto_porfoliohome/shaka.png'

@@ -42,19 +42,8 @@ export default function Header(){
 
                             <img className='logoPorfolio' src={logoPorfolio}></img>
 
+
                             <SwichtButton></SwichtButton>
-                            
-
-                            {/* <Typography  variant="h6"  noWrap  component="div"  sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }} >
-                                
-                                Nilton Medina Porfolio
-                                    
-                            </Typography> */}
-
-{/* 
-                            <Typography  variant="h6"  noWrap  component="div"  sx={{  justifyContent: 'center', flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
-                                <div> Nilton Medina Porfolio</div>
-                            </Typography> */}
                             
 
                             <Box sx={{ justifyContent: 'flex-end',  flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
@@ -63,7 +52,7 @@ export default function Header(){
                                     <Stack spacing={1.5} direction="row">
 
                                         <Link style={{ textDecoration: 'none' }} to='proyectos'>
-                                            <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                            <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ ":hover":{ backgroundColor:'primary.dark' }, width:'110px', my: 2, color: 'white', display: 'block' }} >
                                                
                                                 {/* <div className={ toggleState === 'proyectos' ? 'tab-activate' : 'tab-desactivate' } onClick={ () => toggleTab('proyectos') }>Proyectos</div> */}
                                                 <div id='proyectos'>Proyectos</div>
@@ -124,7 +113,7 @@ export default function Header(){
                                                 </Link>
 
                                                 <Link style={{ textDecoration: 'none' }} to="contactame">
-                                                    <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white', display: 'block' }} >
+                                                    <Button variant="contained" onClick={handleCloseNavMenu}  sx={{ width:'110px', my: 2, color: 'white'}} >
                                                         <div>Contactame</div>
                                                     </Button>
                                                 </Link>
